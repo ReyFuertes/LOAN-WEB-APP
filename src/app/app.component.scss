@@ -1,0 +1,20 @@
+.router-outlet {
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100%;
+  width: 100%;
+}
+.sidebar-container {
+  width: 250px;
+}
+.contents {
+  margin-left: 250px;
+}
+@media (max-width: 1280px) {
+  .sidebar-container {
+    width: 210px !important;
+  }
+  .contents {
+    margin-left: 210px !important;
+  }
+}

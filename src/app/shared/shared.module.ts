@@ -10,6 +10,10 @@ import { MatCheckboxModule, MatIconModule, MatListModule, MatFormFieldModule, Ma
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { TopNavComponent } from './components/top-nav/top-nav.component';
+import { MenuComponent } from './components/menu/menu.component';
+import { SearchComponent } from './components/search/search.component';
+import { PopoverMenuComponent } from './components/popover-menu/popover-menu.component';
 
 
 const materialModules = [
@@ -35,11 +39,15 @@ const primeNgModules = [
 ];
 
 const sharedComponents = [
+  TopNavComponent,
+  SearchComponent,
+  PopoverMenuComponent,
+  MenuComponent
 ];
 
 const directives = [
   NumberOnlyDirective,
-  InputMaxLengthDirective
+  InputMaxLengthDirective,
 ];
 
 @NgModule({

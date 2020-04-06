@@ -1,5 +1,7 @@
 @mixin page-container {
-  margin-top: 55px;
+  margin-top: 75px;
+  // max-width: 1280px;
+  // margin: 70px auto 0; 
   padding: 32px;
   flex-direction: column;
   box-sizing: border-box;

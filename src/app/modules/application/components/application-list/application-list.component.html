@@ -1,0 +1,43 @@
+<table mat-table [dataSource]="dataSource">
+  <ng-container matColumnDef="dateApplied">
+    <th mat-header-cell *matHeaderCellDef> Date Applied </th>
+    <td mat-cell *matCellDef="let applications"> {{applications?.dateApplied}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="borrowerName">
+    <th mat-header-cell *matHeaderCellDef> Borrower Name </th>
+    <td mat-cell *matCellDef="let applications"> {{applications?.borrowerName}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="loanAmount">
+    <th mat-header-cell *matHeaderCellDef> Loan Amount </th>
+    <td mat-cell *matCellDef="let applications"> {{applications?.loanAmount}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="paymentTerm">
+    <th mat-header-cell *matHeaderCellDef> Payment Term </th>
+    <td mat-cell *matCellDef="let applications"> {{applications?.paymentTerm}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="coMaker">
+    <th mat-header-cell *matHeaderCellDef> Co-Maker </th>
+    <td mat-cell *matCellDef="let applications"> {{applications?.coMaker}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="status">
+    <th mat-header-cell *matHeaderCellDef> Status </th>
+    <td mat-cell *matCellDef="let applications"> {{applications?.status}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="action">
+    <th mat-header-cell *matHeaderCellDef></th>
+    <td mat-cell *matCellDef="let applications">
+      <div fxLayoutAlign="end center">
+        <app-popover-menu></app-popover-menu>
+      </div>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

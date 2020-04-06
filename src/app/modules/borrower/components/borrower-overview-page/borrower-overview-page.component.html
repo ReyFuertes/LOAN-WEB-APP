@@ -1,0 +1,18 @@
+<mat-card class="page-card">
+  <div fxLayout="column" fxLayoutGap="20px">
+    <div class="header">
+      <div fxFlex>
+        <h2>BORROWERS</h2>
+      </div>
+    </div>
+    <div class="action">
+      <div fxFlex="75">
+        <app-search></app-search>
+      </div>
+      <div fxFlex fxLayoutAlign="end center">
+        <button mat-flat-button class="il-button primary" >Add</button>
+      </div>
+    </div>
+    <app-borrower-list></app-borrower-list>
+  </div>
+</mat-card>

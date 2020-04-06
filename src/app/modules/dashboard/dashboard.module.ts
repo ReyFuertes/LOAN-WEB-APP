@@ -7,12 +7,18 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 import { NgModule } from '@angular/core';
 import { MatIconModule, MatTooltipModule, MatButtonToggleModule, MatListModule, MatFormFieldModule, MatInputModule, MatBadgeModule, MatMenuModule, MatSelectModule, MatButtonModule, MatAutocompleteModule, MatExpansionModule, MatCardModule, MatStepperModule, MatTabsModule, MatDialogModule, MatSlideToggleModule } from '@angular/material';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { DashboardOverviewPageComponent } from './components/dashboard-overview-page/dashboard-overview-page.component';
 
 const routes: Routes = [
   {
     path: '',
     component: DashboardContainerComponent,
-    children: []
+    children: [
+      {
+        path: '',
+        component: DashboardOverviewPageComponent
+      }
+    ]
   }
 ];
 const primeNgModules = [];
@@ -52,7 +58,10 @@ const materialModules = [
     RouterModule.forChild(routes)
   ],
   exports: [],
-  declarations: [DashboardContainerComponent],
+  declarations: [
+    DashboardContainerComponent,
+    DashboardOverviewPageComponent
+  ],
   providers: [],
 })
 export class DashboardModule { }

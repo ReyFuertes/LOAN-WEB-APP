@@ -1,0 +1,33 @@
+<table mat-table [dataSource]="dataSource">
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef> Name </th>
+    <td mat-cell *matCellDef="let borrowers"> {{borrowers?.name}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="contactNo">
+    <th mat-header-cell *matHeaderCellDef> Contact No </th>
+    <td mat-cell *matCellDef="let borrowers"> {{borrowers?.contactNo}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="spouse">
+    <th mat-header-cell *matHeaderCellDef> Spouse </th>
+    <td mat-cell *matCellDef="let borrowers"> {{borrowers?.spouse}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="address">
+    <th mat-header-cell *matHeaderCellDef> Address </th>
+    <td mat-cell *matCellDef="let borrowers"> {{borrowers?.address}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="action">
+    <th mat-header-cell *matHeaderCellDef></th>
+    <td mat-cell *matCellDef="let borrowers">
+      <div fxLayoutAlign="end center">
+        <app-popover-menu></app-popover-menu>
+      </div>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

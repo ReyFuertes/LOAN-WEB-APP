@@ -1,0 +1,16 @@
+<div class="search" fxLayout="row">
+  <mat-form-field class="example-full-width">
+    <mat-label>Search</mat-label>
+    <input matInput placeholder="Search" >
+  </mat-form-field>
+
+  <div class="advance" fxLayout="row">
+    <span fxLayoutAlign="start center">Advance Filter</span>
+    <img [matMenuTriggerFor]="menu" class="arrow" [src]="svgPath + 'arrow-down-icon-black.svg'">
+    <mat-menu #menu="matMenu" yPosition="below" xPosition="before">
+      <button *ngFor="let option of options" mat-menu-item fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+        <mat-checkbox (change)="onSelectOption(option);" (click)="$event.stopPropagation();">{{ option?.label | uppercase }}</mat-checkbox>
+      </button>
+    </mat-menu>
+  </div>
+</div>

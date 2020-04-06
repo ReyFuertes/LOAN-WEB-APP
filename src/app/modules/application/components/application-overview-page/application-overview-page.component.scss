@@ -1,0 +1,7 @@
+@import "src/styleguide/shared";
+.page-card {
+  height: 80vh;
+}
+.il-button {
+  @include il-button;
+}
